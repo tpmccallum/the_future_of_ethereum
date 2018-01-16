@@ -1,6 +1,6 @@
 # The future of Ethereum 
 
-!(Ethereum logo)[./ethereum_logo_2014.svg]
+![Ethereum logo](./ethereum_logo_2014.svg)
 
 By Ethereum Foundation [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons
 
@@ -52,7 +52,7 @@ proven that it can support next generation decentralised applications (dapps) wh
 customised online payments, authentication mechanisms, decentralised storage solutions (swarm),
 digital currencies and much more.
 
-!(swarm logo)[./swarm.png]
+![swarm logo](./swarm.png)
 
 By Ethereum Foundation [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons
 
@@ -109,7 +109,8 @@ Competitive PoW mining has also continued on other blockchain implementations su
 This competition amongst miners has resulted in the creation of more competitive specialised
 hardware such as application-specific integrated circuit chips (ASICs).
 
-!(asic miner)[./asic_miner.jpg]
+![asic miner](./asic_miner.jpg)
+
 Image by Youwei-han (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-
 sa/4.0)], via Wikimedia Commons
 
@@ -155,7 +156,7 @@ penalty. In a given PoW blockchain implementation (where all nodes are running t
 consensus mechanism) the chain with the most blocks (the longest chain) wins. This is because it
 exhibits the most proof of work.
 
-!(blocks in a blockchain)[pow_blockchain.png]
+![blocks in a blockchain](./pow_blockchain.png)
 
 By original file: Theymos from Bitcoin wiki vectorization: Own work [CC BY 3.0
 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons
@@ -314,6 +315,7 @@ implementations such as the Zero Knowledge Succinct Non-interactive ARguments of
 SNARKs potential is the creation of a decentralised anonymous sealed-bid auction. In this case,
 whilst the logic of determining the winner would execute successfully, the winner’s identity and the
 winning bid amount would both remain confidential.
+
 Since verifying arbitrary computations is at the core of the Ethereum blockchain, ZK-SNARKs are
 of course very relevant to Ethereum. If implemented in Ethereum, ZK-SNARKs would not be
 limited to a single computational problem. Enabling ZK-SNARKs for Ethereum would, amongst
@@ -336,13 +338,17 @@ However, a new shiner cousin, Zero Knowledge Succinct Transparent ARguments of K
 assumptions. You may recall that ZK-SNARKs was promising advantages in relation to pairing
 functions and elliptical curve operations. Well, ZK-STARKs avoid the need for elliptic curves,
 pairings and the knowledge-of-exponent assumption; instead ZK-STARKs rely purely on hashes
-and information theory. This means that whilst ZK-STARKs bring about efficiency gains and more,
+and information theory. 
+
+This means that whilst ZK-STARKs bring about efficiency gains and more,
 they are also secure against attackers with quantum computers. Looking towards the future, ZK-
 STARKs could replace ZK-SNARKs, providing superior scalability and privacy, specifically to
 decentralised public ledgers like Ethereum. It is also important to note that these advantages all
 come at a cost IE. the size of a proof goes up from 288 bytes to a few hundred kilobytes. Further
 research is required in relation to shortening proof length or the aggregation and compression of
-several ZK-STARKs proofs. In the context of public blockchain applications there is a) a high need
+several ZK-STARKs proofs. 
+
+In the context of public blockchain applications there is a) a high need
 for trust minimisation b) a possibilities that elliptic curves could break and c) a seemingly real
 possibility of quantum computers coming around. Given all of these points, implementing ZK-
 STARKs in decentralised public ledgers seems worth it, even if there are costs involved.
