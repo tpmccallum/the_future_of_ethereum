@@ -200,7 +200,7 @@ base layer protocol. More specifically second layer solutions have no effect on 
 protocol's consensus mechanism. Just to clarify, plasma differs from sharding in that a successful
 sharding solution would be coded into the base layer protocol. Plasma is designed to be compatible
 with on-chain scaling solutions such as sharding and therefore can not only co-exist but even be
-complimentary. In fact on chain scalability improvements will just further increase the scalability of
+complimentary. In fact on-chain scalability improvements will just further increase the scalability of
 the second layer solution.
 
 Plasma is a set of nested blockchains. These plasma blockchains are created using smart contracts
