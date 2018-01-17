@@ -210,7 +210,7 @@ exchanges, social networks, payment networks and even your own private Ethereum 
 implementation. These plasma blockchains (your applications) are all accountable to the public
 Ethereum blockchain.
 
-The sociability is brought about by the fact that whilst processing an extremely high volume of
+The scalability is brought about by the fact that whilst processing an extremely high volume of
 transactions, the plasma blockchains do not submit their entire transaction volume to the public
 Ethereum blockchain. Instead the plasma blockchains only send a very small amount of data (block
 header hashes) about the plasma blockchains state. Plasma works on the premise that data being
