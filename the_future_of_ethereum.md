@@ -194,7 +194,7 @@ three.
 ### Plasma
 Plasma is just one of the strategies which could address blockchain scalability. Plasma is different to
 sharding (which we will cover later in the chapter). A successful plasma implementation would send
-transactions off chain to improve scalability. In this regard, plasma is what is known as a second
+transactions off-chain to improve scalability. In this regard, plasma is what is known as a second
 layer solution. Second layer solutions are implemented through code which is written outside of the
 base layer protocol. More specifically second layer solutions have no effect on the base layer
 protocol's consensus mechanism. Just to clarify, plasma differs from sharding in that a successful
