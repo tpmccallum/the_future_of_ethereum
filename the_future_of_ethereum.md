@@ -275,20 +275,8 @@ step forward as at present there are only a few Ethereum testnets, in use, on wh
 counter-productive to deliberately make changes that would result in chain-splits/hard-forks.
 
 ## Zero Knowledge Proofs
-The basic premise of the zero knowledge proofs is this. In a given binary situation (where there are
-only two outcomes available IE. yes/no) a “prover”, with the secret weapon to discern a binary
-statement from the situation, must convince a sceptical “verifier” that the binary statement is
-correct, whilst not revealing their secret.
-In his poster, Goldreich introduces the zero knowledge proof scenario of a colourblind validator,
-who is in possession of two cards (one red and the other green). To the colourblind validator the
-cards look the same, other than the fact that the word red is written on the back of the red card, and
-the word green is written on the back of the other. The validator is sceptical about the prover's claim
-to be able to discern the cards without seeing the words on the back. The validator then repeatedly
-shows the prover the front side of each card, in a random fashion. Each time, asking the prover what
-colour he sees. After some time, the verifier is eventually convinced that the prover can discern the
-colours of the two individual cards. This is mostly due to the fact that a) the verifier performed this
-over many rounds and b) the validator randomly switched the cards behind his back during each
-round.
+The basic premise of the zero knowledge proofs is this. In a given binary situation (where there are only two outcomes available IE. yes/no) a “prover”, with the secret weapon to discern a binary statement from the situation, must convince a sceptical “verifier” that the binary statement is correct, whilst not revealing their secret. In 2003 a Weizmann Institute of Science faculty member, Oded Goldreich, introduced a novel zero knowledge proof scenario involving a colourblind validator. In this scenario the validator possesed two cards, one red and the other green. To the colourblind validator the cards looked the same, other than the fact that the word red was written on the back of the red card, and the word green written on the back of the other. Let's play out this scanario, and assume that the validator is sceptical about the prover's claim to be able to discern the cards without seeing the words on the back. To move this experiment forward the validator would repeatedly show the prover the front side of each card, in a random fashion. Each time, the validator would ask the prover what colour he sees. After some time, the verifier would eventually be convinced that the prover is capable of discerning the colours of the two individual cards. This is mostly due to the fact that a) the verifier performed this over many rounds and b) the validator randomly switched the cards behind his back during each round.
+
 Below are the three properties of which a zero knowledge proof must satisfy:
 - Completeness
 This is when the honest verifier is convinced that the honest prover returned the correct answer in
@@ -301,12 +289,9 @@ is correct
 This is where a prover (even a dishonest one who is just guessing the answer of their binary
 statement) is able to convince an honest verifier that their answer is correct
 
-Whilst the first two properties can be quite easily satisfied during one round of an interactive zero
-knowledge proof exercise, there is statistically only a 50% chance of achieving soundness. Put
-simply, a dishonest prover could just take a 50/50 guess to the binary situation, and get it right 50%
-of the time.
-With this in mind it is important to remember that zero knowledge proof’s are probabilistic. They
-are not deterministic. They rely on randomness to succeed.
+Whilst the first two properties can be quite easily satisfied during one round of an interactive zero knowledge proof exercise, there is statistically only a 50% chance of achieving soundness. Put simply, a dishonest prover could just take a 50/50 guess to the binary situation, and get it right 50% of the time. 
+
+With this in mind it is important to remember that zero knowledge proof’s are probabilistic. They are not deterministic. They rely on randomness to succeed.
 
 ## ZK-SNARKs
 These properties are able to be satisfied through computer code and as such zero knowledge proof
