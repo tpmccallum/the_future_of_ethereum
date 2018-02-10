@@ -301,16 +301,8 @@ SNARKs potential is the creation of a decentralised anonymous sealed-bid auction
 whilst the logic of determining the winner would execute successfully, the winner’s identity and the
 winning bid amount would both remain confidential.
 
-Since verifying arbitrary computations is at the core of the Ethereum blockchain, ZK-SNARKs are
-of course very relevant to Ethereum. If implemented in Ethereum, ZK-SNARKs would not be
-limited to a single computational problem. Enabling ZK-SNARKs for Ethereum would, amongst
-other things, reduce the gas costs for certain pairing functions and elliptic curve operations. Overall,
-the biggest payoff for enabling ZK-SNARKs would be improved (guaranteed) performance of the
-Ethereum Virtual Machine (EVM). Unfortunately an implementation of this magnitude would be
-extremely difficult to complete and as such might take many years to move from proof of concept
-to early adoption. This may be something which we could see around 2020. However, in the event
-that this is too onerous, the other possibility would be to swap out the EVM completely and use
-something like the Ethereum flavoured WebAssembly (eWASM).
+You can think of ZK-SNARKs in the following way. ZK-SNARKs are for arbitary computations, just as hashing algorithm are for arbitary data. Put simply, you can turn an arbitary computation into a ZK-SNARK, and since verifying arbitrary computations is at the core of the Ethereum blockchain, ZK-SNARKs are of course very relevant to Ethereum. If implemented in Ethereum, ZK-SNARKs would not be limited to a single computational problem. Enabling ZK-SNARKs for Ethereum would, amongst other things, reduce the gas costs for certain pairing functions and elliptic curve operations. Overall, the biggest payoff for enabling ZK-SNARKs would be improved (guaranteed) performance of the Ethereum Virtual Machine (EVM). Unfortunately an implementation of this magnitude would be extremely difficult to complete and as such might take many years to move from proof of concept
+to early adoption. This may be something which we could see around 2020. However, in the event that this is too onerous, the other possibility would be to swap out the EVM completely and use something like the Ethereum flavoured WebAssembly (eWASM). 
 
 # Ethereum 3.0?
 ## ZK-STARKs
