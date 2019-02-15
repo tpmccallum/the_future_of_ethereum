@@ -61,8 +61,7 @@ By Ethereum Foundation [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)],
 
 In this chapter we will begin by covering the 2018 development of Ethereum. We will look at how
 the Ethereum foundation's researchers and Ethereum developers are solving present day challenges.
-We will then step into the future by uncovering developments which are at the fringe; developments
-which could materialise as proof of concepts for early adoption around 2020. Before concluding the
+We will then step into the future by uncovering developments which are at the fringe. Before concluding the
 future of Ethereum we will look well into the future, at the "hard to implement" paradigm shifts
 which if realised could propel Ethereum forward, beyond what is even imaginable today in terms of
 privacy, scalability and security.
@@ -130,8 +129,7 @@ Hence, Casper FFG is a hybrid PoW/PoS consensus solution.
 There are more than 3 Ethereum testnets. These Ethereum testnets are sandboxes, used to simulate
 the Ethereum network and the Ethereum Virtual Machine (EVM). Ethereum's hybrid PoW/PoS
 implementation, Casper FFG, has been launched in its own testnet (not in production). The Casper
-FFG testnet went live around the 1st of January 2018. The following section is an early overview of
-the Casper FFG PoW/PoS hybrid consensus solution.
+FFG testnet went live around the 1st of January 2018. The following section is an overview of the ideas behind the proposed PoW/PoS hybrid consensus solution; Casper FFG PoW/PoS.
 
 In PoW mining, a miner is set a challenge; finding a nonce. Finding the nonce is done by brute
 force and involves randomly guessing repeatedly until the nonce is discovered. This process is the
