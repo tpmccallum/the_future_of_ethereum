@@ -7,17 +7,18 @@ By Ethereum Foundation [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)],
 # Outcomes
 In this chapter you will:
 - learn about the Ethereum Improvement Proposal (EIP) process
-- discover Ethereum’s hybrid Proof of Work (PoW) / Proof of Stake (PoS) consensus
+- explore Ethereum’s attempts at implementing a hybrid Proof of Work (PoW) / Proof of Stake (PoS) consensus
 algorithm called Casper the Friendly Finality Gadget (FFG)
-- gain a basic understanding of the economic model which underpins Ethereum’s Casper FFG
-consensus algorithm
- -learn about second layer solutions which aim to resolve Ethereum’s scalability by taking
+- gain a basic understanding of the economic model beneath Ethereum’s Casper FFG
+consensus algorithm idea
+ -learn about second layer solutions (like Plasma) which aim to resolve Ethereum’s scalability by taking
 transactions off-chain
 - learn about Ethereum’s lofty goals of base layer protocol solutions which could resolve the
-scalability issues on-chain, through the use of sharding
+scalability issues on-chain; through the use of sharding
 - learn about completeness, zero knowledge proof and soundness
 - learn about ZK-STARKs a long-term and hard-to-implement quantum resistant
 improvement for solving blockchain privacy, scalability and speed
+
 Before we begin, lets take a look at how ongoing improvements in Ethereum are proposed and
 implemented in a collaborative and open source environment
 
