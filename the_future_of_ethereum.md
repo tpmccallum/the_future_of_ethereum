@@ -13,13 +13,13 @@ algorithm called Casper the Friendly Finality Gadget (FFG)
 consensus algorithm idea
 - learn about second layer solutions (like Plasma) which aim to resolve Ethereum’s scalability by taking
 transactions off-chain
-- learn about off-chain data solutions (like TheGraph) which enable DApps to easily traverse blockchain data
 - learn about Ethereum’s lofty goals of base layer protocol solutions which could resolve the
 scalability issues on-chain; through the use of sharding
-- learn about new developments in smart contract languages and the introduction of Ethereum's Vyper programming language
 - learn about completeness, zero knowledge proof and soundness
 - learn about ZK-STARKs a long-term and hard-to-implement quantum resistant
 improvement for solving blockchain privacy, scalability and speed
+- learn about off-chain data solutions (like TheGraph) which enable DApps to easily traverse blockchain data
+- learn about new wave of DApps being written in Ethereum's newest smart contract language, Vyper
 
 Before we begin, lets take a look at how ongoing improvements in Ethereum are proposed and
 implemented in a collaborative and open source environment
@@ -222,10 +222,10 @@ dispute and punishing the offending participant.
 ### State Channels
 State channels are a mechanism which allow two participants to sign promises, at given points in
 time. These time based off-chain signed promises provide proof of activity. State channels provide
-an opportunity for decentralised applications (dapps) to interact with other parties (customers) off-
+an opportunity for decentralised applications (DApps) to interact with other parties (customers) off-
 chain. This provides a cheap and fast user experience, which would not be possible on chain. State channels are smart contracts. State channels are also a second layer solution to the Ethereum
-scalability problem. From a usability perspective (dapp development) having a high volume of off-
-chain activity means low to negligible gas fees. As such dapps which employ state channels as part
+scalability problem. From a usability perspective (DApp development) having a high volume of off-
+chain activity means low to negligible gas fees. As such DApps which employ state channels as part
 of their solution not only offer near real-time activity but also the ability for customers to send and
 receive micro-payments. A use case for this could be a gambling application which allows a high
 volume of micro-betting, in real-time, for entertainment purposes.
@@ -239,40 +239,35 @@ network of channels whereby all participant are transitively connected via a web
 complaint, payment channels; making use of natural network topology architecture.
 
 # Ethereum 2.0
-Ethereum has the lofty goal of creating a blockchain which will far surpass the current second layer
-solutions on offer. The vision is to create a blockchain which will be capable of scaling to thousands
-of on-chain transactions per second. And in addition will perform consensus, using nothing more
-sophisticated than ordinary consumer laptops. The vision was described, in Taiwan on the 10th of
-December 2017, by Vitalik Buterin. The core model, which introduces the notion of parallel
-blockchains, referred to by Ethereum as universes, is achieved through the use of sharding.
+Ethereum has plans of creating a blockchain which will far surpass the current second layer
+solutions on offer. The overall vision is to create a blockchain which will be capable of scaling to thousands
+of on-chain transactions per second. One of the first public mentions of this vision took place in Taiwan (in December of 2017). During this talk, Vitalik Buterin introduces the notion of parallel blockchains (universes) which could potentially be achieved through the use of an approach known as sharding.
 
 ## Sharding
 Imagine a system where a protocol can be used to transfer transactions and contracts across 100
-different universes. Each of the universes operates in a different address space and therefore there
-are no side-effects in relation to address usage. The universes communicate using a protocol. The
-protocol facilitates the transfer of transactions and contracts between universes. The universes
-would also share universal overarching consensus.
+different universes. Each of the universes would operate in a different address space and therefore there
+would be no side-effects in relation to address usage. The universes could communicate using a protocol. The
+protocol would facilitate the transfer of transactions and contracts between all of the universes. The universes
+would also share universal overarching consensus. 
 In this scenario, the current (main) Ethereum blockchain would publish what is known as a
 "Validator Manager Contract". The current Ethereum blockchain would remain in service with the
 current level of scalability which would be sufficient for this system. The Validator Manager
-Contract would maintain an internal PoS system; keeping track of the 100 universes. The Validator
+Contract would maintain an internal PoS system; keeping track of, say, 100 universes. The Validator
 Manager Contract would assign a random validator the right to create the next upcoming block on
 each of the 100 universes. Validators would include anyone on the current main Ethereum
 blockchain who wanted to stake ETH into the Validator Manager Contract and become a validator.
+
 Of course each of the 100 universes would produce many transactions and contracts. These could
 simply be represented and stored on the main chain, via the Validator Manager Contract, as headers
 only. More specifically Proof of Stake (PoS) block headers. This structure of blocks being
 represented by headers is not new. It would be in accordance with the current Ethereum PoW block
-headers structure. As we know the block header (which is a small string of characters) is
+header structure. As we know the block header (which is a small string of characters) is
 significantly smaller than the entire block of transactions and data. Essentially the Validating
 Manager Contract acts as a light client for each shard.
 
 We mentioned earlier, that with sharding, there would be no side-effects in relation to address
 spaces. This design decision brings about an enormous opportunity for developers to perform much
-needed and important research in parallel. Including the introduction and testing of protocol
-changes which, while useful, would ultimately be non backwards compatible. This is an important
-step forward as at present there are only a few Ethereum testnets, in use, on which it would be
-counter-productive to deliberately make changes that would result in chain-splits/hard-forks.
+needed and important research  and testing in parallel. 
 
 ## Zero Knowledge Proofs
 The basic premise of the zero knowledge proofs is this. In a given binary situation (where there are only two outcomes available IE. yes/no) a “prover”, with the secret weapon to discern a binary statement from the situation, must convince a sceptical “verifier” that the binary statement is correct, whilst not revealing their secret. In 2003 a Weizmann Institute of Science faculty member, Oded Goldreich, introduced a novel zero knowledge proof scenario involving a colourblind validator. In this scenario the validator possesed two cards, one red and the other green. To the colourblind validator the cards looked the same, other than the fact that the word red was written on the back of the red card, and the word green written on the back of the other. Let's play out this scanario, and assume that the validator is sceptical about the prover's claim to be able to discern the cards without seeing the words on the back. To move this experiment forward the validator would repeatedly show the prover the front side of each card, in a random fashion. Each time, the validator would ask the prover what colour he sees. After some time, the verifier would eventually be convinced that the prover is capable of discerning the colours of the two individual cards. This is mostly due to the fact that a) the verifier performed this over many rounds and b) the validator randomly switched the cards behind his back during each round.
@@ -304,7 +299,6 @@ winning bid amount would both remain confidential.
 You can think of ZK-SNARKs in the following way. ZK-SNARKs are for arbitary computations, just as hashing algorithm are for arbitary data. Put simply, you can turn an arbitary computation into a ZK-SNARK, and since verifying arbitrary computations is at the core of the Ethereum blockchain, ZK-SNARKs are of course very relevant to Ethereum. If implemented in Ethereum, ZK-SNARKs would not be limited to a single computational problem. Enabling ZK-SNARKs for Ethereum would, amongst other things, reduce the gas costs for certain pairing functions and elliptic curve operations. Overall, the biggest payoff for enabling ZK-SNARKs would be improved (guaranteed) performance of the Ethereum Virtual Machine (EVM). Unfortunately an implementation of this magnitude would be extremely difficult to complete and as such might take many years to move from proof of concept
 to early adoption. This may be something which we could see around 2020. However, in the event that this is too onerous, the other possibility would be to swap out the EVM completely and use something like the Ethereum flavoured WebAssembly (eWASM). 
 
-# Ethereum 3.0?
 ## ZK-STARKs
 The confidentiality of zero knowledge proof is already being used to enhance privacy in
 cryptocurrencies. For example Zcash, already uses the ZK-SNARKs protocol. We just mentioned
@@ -329,3 +323,7 @@ In the context of public blockchain applications there is a) a high need
 for trust minimisation b) a possibilities that elliptic curves could break and c) a seemingly real
 possibility of quantum computers coming around. Given all of these points, implementing ZK-
 STARKs in decentralised public ledgers seems worth it, even if there are costs involved.
+
+## Off-chain data
+
+## Ethereum's newest programming language, Vyper
