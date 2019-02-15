@@ -11,10 +11,12 @@ In this chapter you will:
 algorithm called Casper the Friendly Finality Gadget (FFG)
 - gain a basic understanding of the economic model beneath Ethereum’s Casper FFG
 consensus algorithm idea
- -learn about second layer solutions (like Plasma) which aim to resolve Ethereum’s scalability by taking
+- learn about second layer solutions (like Plasma) which aim to resolve Ethereum’s scalability by taking
 transactions off-chain
+- learn about off-chain data solutions (like TheGraph) which enable DApps to easily traverse blockchain data
 - learn about Ethereum’s lofty goals of base layer protocol solutions which could resolve the
 scalability issues on-chain; through the use of sharding
+- learn about new developments in smart contract languages and the introduction of Ethereum's Vyper programming language
 - learn about completeness, zero knowledge proof and soundness
 - learn about ZK-STARKs a long-term and hard-to-implement quantum resistant
 improvement for solving blockchain privacy, scalability and speed
