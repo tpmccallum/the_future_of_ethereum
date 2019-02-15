@@ -128,14 +128,13 @@ Hence, Casper FFG is a hybrid PoW/PoS consensus solution.
 
 There are more than 3 Ethereum testnets. These Ethereum testnets are sandboxes, used to simulate
 the Ethereum network and the Ethereum Virtual Machine (EVM). Ethereum's hybrid PoW/PoS
-implementation, Casper FFG, has been launched in its own testnet (not in production). The Casper
-FFG testnet went live around the 1st of January 2018. The following section is an overview of the ideas behind the proposed PoW/PoS hybrid consensus solution; Casper FFG PoW/PoS.
+implementation, Casper FFG, was launched on its own testnet (not in production) in January of 2018. The following section is an overview of the ideas behind the proposed PoW/PoS hybrid consensus solution; Casper FFG PoW/PoS.
 
 In PoW mining, a miner is set a challenge; finding a nonce. Finding the nonce is done by brute
 force and involves randomly guessing repeatedly until the nonce is discovered. This process is the
 miners proof that they have **worked**. Hence the name Proof of Work (PoW). In PoS the blocks are
 created by validators. Validators are only allowed to participate in creating blocks if they put skin in
-the game. This involves **staking** a large deposit (at this early stage believed to be around 1, 500
+the game. This involves **staking** a large deposit (for example a significant amount such as 1, 500
 ETH). Hence the name Proof of Stake (PoS).
 
 PoS validation is unlike PoW mining from a hardware perspective as there is no specialised
@@ -162,17 +161,17 @@ exhibits the most proof of work.
 By original file: Theymos from Bitcoin wiki vectorization: Own work [CC BY 3.0
 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons
 
-In Casper FFG PoS the chain with the most Value at Risk (VaR) supporting it wins. The general
+In Casper FFG PoS, the chain with the most Value at Risk (VaR) supporting it wins. The general
 principle is that if you support a block that does not make it into the main chain, instead of being
 rewarded you get penalised. You loose an amount of ETH which is equal to the block reward. In
 practice let’s propose that there are two blocks available to support. The block on chain A has a 90%
 chance of succeeding. The block on chain B has a 10% chance of succeeding. If you support chain
 A you will be rewarded. If you support chain B you will be penalised. A potential economic
 conundrum comes into play if you start thinking that you could support both A and B for profit.
-Ethereum has a clever way of making this unappealing. In this case where you have split your bet
-two ways, you will only be allowed to receive 50% of the reward from chain A (if it succeeds) and
+Ethereum came up with a clever way of making this unappealing. In the case where a participant splits their bet
+two ways, they will only be allowed to receive 50% of the reward from chain A (if it succeeds) and
 50% of the reward from chain B (if it succeeds). This betting on both sides will always net a lessor
-result than just supporting chain A. This economic incentive results in convergence, and this is the
+result than just supporting, say, chain A. This economic incentive results in convergence, and this is the
 desired path to ensure a single honest chain via PoS consensus. The following is a very simple,
 albeit concrete, example for demonstration purposes.
 
