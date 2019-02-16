@@ -124,7 +124,7 @@ Ethereum have had plans of creating a blockchain to surpass the current second l
 
 The original idea for sharding was that the main Ethereum blockchain would publish what is known as a "Validator Manager Contract". In this scenario, the validator manager contract would simply be a single smart contract on the Ethereum 1.0 blockchain. It was decided (in July 2017) shortly after disparate development processes in the areas of both Casper (PoS) and sharding that this architecture would change. The most significant change to the original idea was to make the core component of the sharding system, not just a smart contract, but instead a complete PoS chain. This shift from a PoW smart contract to a self sufficient PoS chain would remove the need for gas, reduce transaction times and reduce dependency on the underlying EVM. 
 
-The section below, called Ethereum 2.0, provides a comprehensive explaination of this new sharding architecture, namely the introduction of the beacon chain.
+The section below, called Ethereum 2.0, provides an explaination of this new sharding architecture, namely the introduction of the beacon chain.
 
 ## Zero Knowledge Proofs
 
@@ -198,4 +198,4 @@ Ethereum 2.0 is expected to be implemented as follows. Firstly with Phase 0. Pha
 
 # Post Ethereum 2.0 innovation
 
-We mentioned zk-STARKs previously in this chapter. There is a chance that Ethereum will upgrade to the use of STARKs in order to perform tasks such as data availability checks, state execution correctness checks and improved base-layer cross-shard transactions, to name a few. For more information on zk-STARKs please see the [STARKware industries site](https://www.starkware.co/) which a reasonable amount of new information as well as a 3 part STARK video tutorial by Ethereum's creator, Vitalik Buterin.
+We mentioned zk-STARKs previously in this chapter. The main difference between SNARKs and STARKs is transparency. More specifically, the fact that there is no "trusted setup" (no secrets in the setting up of the system). This is a very interesting area of research and there is a chance that Ethereum will eventually upgrade to the use of STARKs in order to perform tasks such as data availability checks, state execution correctness checks and improved base-layer cross-shard transactions, to name a few. For more information on zk-STARKs please see the [STARKware industries site](https://www.starkware.co/) which provides a 3 part STARK video tutorial by Ethereum's creator, Vitalik Buterin.
