@@ -14,13 +14,10 @@ algorithm called Casper the Friendly Finality Gadget (FFG)
 consensus algorithm idea
 - learn about second layer solutions (like Plasma) which aim to resolve Ethereum’s scalability by taking
 transactions off-chain
-- learn about Ethereum’s lofty goals of base layer protocol solutions which could resolve the
-scalability issues on-chain; through the use of sharding
 - learn about completeness, zero knowledge proof and soundness
 - learn about ZK-STARKs a long-term and hard-to-implement quantum resistant
 improvement for solving blockchain privacy, scalability and speed
-- learn about off-chain data solutions (like TheGraph) which enable DApps to easily traverse blockchain data
-- learn about new wave of DApps being written in Ethereum's newest smart contract language, Vyper
+- learn about the redesign of sharding, specifically the implementation of Ethereum 2.0 which sees sharding implemented as its own PoS chain as apposed to a smart contract
 
 Before we begin, lets take a look at how ongoing improvements in Ethereum are proposed and implemented in a collaborative and open source environment
 
@@ -173,7 +170,9 @@ In the context of public blockchain applications there is a) a high need for tru
 
 # Ethereum 2.0
 
-Ethereum 2.0 comprises of many separate components. Proof of Stake (PoS), sharding and EWASM have been on the minds of Ethereum developers for quite some time. For example Vitalik Buterin has been writing about PoS implementation ideas since as far back as 2014. After years of research and development, these Ethereum 2.0 ideas are making their way into the code repositories of many Ethereum developers throughout the community.
+Ethereum 2.0 comprises of many separate components. Casper Proof of Stake (PoS), sharding and EWASM have been on the minds of Ethereum developers for quite some time. For example Vitalik Buterin has been writing about PoS implementation ideas since as far back as 2014. This blend of technologies somehow resulted in Ethereum 2.0 adopting the unfortunate name of "Shasper" - a combination of Sharding and Casper PoW. Thankfully most of the time nowadays you will see it referred to as either Serenity or simply Ethereum 2.0.
+
+After years of research and development, these Ethereum 2.0 ideas are making their way into the code repositories of many Ethereum developers throughout the community. For example there are many individual implementations of the Ethereum 2.0 specification, including this [Rust implementation of the Ethereum 2.0 beacon chain](https://github.com/sigp/lighthouse) and this [Java Implementation of the Ethereum 2.0 Beacon Chain](https://github.com/PegaSysEng/pantheon).
 
 The [Ethereum 2.0 specification](https://github.com/ethereum/eth2.0-specs/) documents, indicate that Ethereum 2.0 can initially be implemented without any consensus changes to Ethereum 1.0. This means that at this early stage, the Ethereum 1.0 base layer will not undergo a fork or chain split whilst moving these exciting ideas forward into implementation. As we will discuss shortly, a contract (the gateway to the Ethereum 2.0) will be added to Ethereum 1.0, and deposits into this contract will allow users to become validators on the Ethereum 2.0 beacon chain. 
 
@@ -187,14 +186,10 @@ The beacon chain invites new validators to join Ethereum 2.0. As previously ment
 
 ### Shard chain
 
-There are many shard chains. Shard chains are where end-user transactions take place and where transaction information is stored. When signing off (attesting to) a block, the committee of validators create what is known as a crosslink. A crosslink is essentially a set of validator signatures; attesting to a block in a shard chain which is then included into the beacon chain. A crosslink allows updates in a shard chain to be communicated with the beacon chain.  
+There are many shard chains. Shard chains are where end-user transactions take place and where transaction information is stored. When signing off (attesting to) a block, the committee of validators create what is known as a crosslink. A crosslink is essentially a set of validator signatures; attesting to a block in a shard chain which is then included into the beacon chain. A crosslink allows updates in a shard chain to be communicated with the beacon chain i.e. crosslinks are used to determine the finality of shards. 
 
-One of the design goals of Ethereum 2.0 is to allow for a typical consumer laptop to process (validate) shards, including any system level validation such as the beacon chain. This is made possible by the fact that the sharding architecture now uses its own PoS chain as apposed to the original idea, mentioned above, where the sharding architecture consists of a single smart contract on the PoW chain.
+One of the design goals of Ethereum 2.0 is to allow for a typical consumer laptop to process (validate) shards, including any system level validation such as the beacon chain. This is made possible by the fact that the sharding architecture now uses its own PoS chain as apposed to the original idea, mentioned above, where the old sharding architecture used to consist of a single smart contract on the PoW chain.
+
+You may have already realized by now that Ethereum 2.0/Serenity is a new blockchain. Albeit one which links to the existing Ethereum 1.0 PoW chain (i.e. the new PoS chain is aware of the block hashes of the PoW chain and so forth). The goal for this architecture will allow Ether to be moved between the original PoW chain and the PoS chain. In addition the long term vision would be to allow applications from the current blockchain to be redeployed on a shard of the Ethereum 2.0 system. This would be implemented via a new EVM interpreter written in EWASM.
 
 
-
-
-# Other news
-## Off-chain data
-
-## Ethereum's newest programming language, Vyper
