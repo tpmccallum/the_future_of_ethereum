@@ -214,7 +214,16 @@ The next phase, Phase 1 will implement shards as data chains. Phase 1 will provi
 
 ## Phase 2
 
-EVM state transition functionality will be introduced in Phase 2. Phase 2 will introduce functionality to create and manage accounts and contracts as well as transfer funds between shards and so forth. It is hoped that state transition changes and transaction executions will improve significantly due to the implementation of eWASM. There is a comprehensive [Ethereum 2.0 roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap#ethereum-20) which details each of the proposed phases. Please keep in mind that these specifications do change frequently and that the proof-of-concept algorithms and code repositories are under heavy construction.
+EVM state transition functionality will be introduced in Phase 2. Phase 2 will introduce functionality to create and manage accounts and contracts as well as transfer funds between shards and so forth. 
+
+The subsequent phases 3, 4, 5 and 6 have plans to introduce:
+- a light client state protocol
+- cross-shard transactions
+- tight coupling with main chain security
+- super-quadratic or exponential sharding
+
+It is hoped that state transition changes and transaction executions will improve significantly due to the implementation of eWASM. There is a comprehensive [Ethereum 2.0 roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap#ethereum-20) which details each of the proposed phases. Please keep in mind that these specifications do change frequently and that the proof-of-concept algorithms and code repositories are under heavy construction.
+
 
 # Post Ethereum 2.0 innovation
 
