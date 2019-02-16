@@ -176,7 +176,7 @@ After years of research and development, these Ethereum 2.0 ideas are making the
 
 The [Ethereum 2.0 specification](https://github.com/ethereum/eth2.0-specs/) documents, indicate that Ethereum 2.0 can initially be implemented without any consensus changes to Ethereum 1.0. This means that at this early stage, the Ethereum 1.0 base layer will not undergo a fork or chain split whilst moving these exciting ideas forward into implementation. As we will discuss shortly, a contract (the gateway to the Ethereum 2.0) will be added to Ethereum 1.0, and deposits into this contract will allow users to become validators on the Ethereum 2.0 beacon chain. 
 
-## Phase 0 -- The Beacon Chain
+## The Beacon Chain
 
 One of the core components, mentioned in the Ethereum 2.0 specifications, is the beacon chain. The beacon chain is the central Proof of Stake (PoS) chain which underpins the sharding system. The beacon chain stores and maintains a registry of validators.
 
@@ -192,4 +192,10 @@ One of the design goals of Ethereum 2.0 is to allow for a typical consumer lapto
 
 You may have already realized by now that Ethereum 2.0/Serenity is a new blockchain. Albeit one which links to the existing Ethereum 1.0 PoW chain (i.e. the new PoS chain is aware of the block hashes of the PoW chain and so forth). The goal for this architecture will allow Ether to be moved between the original PoW chain and the PoS chain. In addition the long term vision would be to allow applications from the current blockchain to be redeployed on a shard of the Ethereum 2.0 system. This would be implemented via a new EVM interpreter written in EWASM.
 
+# Delivery phases of Ethereum 2.0
 
+Ethereum 2.0 is expected to be implemented as follows. Firstly with Phase 0. Phase 0, which we have briefly covered above, involves the introduction of the beacon chain and so essentially the beginning of the new PoS chain. The next phase, Phase 1 will implement shards as data chains. Phase 1 will provide the foundations to create decentralized data applications, however in order to full implement any of these types of applications the benefits of phase 2 will be required. Phase 2 will enable  state transitions or more specifically the ability to create and manage accounts and contracts as well as transfer funds between shards and so forth. It is hoped that virtual machine execution will improve significantly due to the change to EWASM.
+
+# Post Ethereum 2.0 innovation
+
+We mentioned zk-STARKs previously in this chapter. There is a chance that Ethereum will updgrade to the use of STARKs in order to perform tasks such as data availability checks, state execution correctness checks and improved base-layer cross-shard transactions, to name a few.
