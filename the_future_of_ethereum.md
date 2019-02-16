@@ -270,7 +270,7 @@ spaces. This design decision brings about an enormous opportunity for developers
 needed and important research  and testing in parallel. 
 
 ## Zero Knowledge Proofs
-The basic premise of the zero knowledge proofs is this. In a given binary situation (where there are only two outcomes available IE. yes/no) a “prover”, with the secret weapon to discern a binary statement from the situation, must convince a sceptical “verifier” that the binary statement is correct, whilst not revealing their secret. In 2003 a Weizmann Institute of Science faculty member, Oded Goldreich, introduced a novel zero knowledge proof scenario involving a colourblind validator. In this scenario the validator possesed two cards, one red and the other green. To the colourblind validator the cards looked the same, other than the fact that the word red was written on the back of the red card, and the word green written on the back of the other. Let's play out this scanario, and assume that the validator is sceptical about the prover's claim to be able to discern the cards without seeing the words on the back. To move this experiment forward the validator would repeatedly show the prover the front side of each card, in a random fashion. Each time, the validator would ask the prover what colour he sees. After some time, the verifier would eventually be convinced that the prover is capable of discerning the colours of the two individual cards. This is mostly due to the fact that a) the verifier performed this over many rounds and b) the validator randomly switched the cards behind his back during each round.
+The basic premise of the zero knowledge proofs is this. In a given binary situation (where there are only two outcomes available IE. yes/no) a “prover”, with the secret weapon to discern a binary statement from the situation, must convince a sceptical “verifier” that the binary statement is correct, whilst not revealing their secret. In 2003 a Weizmann Institute of Science faculty member, Oded Goldreich, introduced a novel zero knowledge proof scenario involving a colourblind validator. In this scenario the validator possesed two cards, one red and the other green. To the colourblind validator the cards looked the same, other than the fact that the word red was written on the back of the red card, and the word green written on the back of the other. Let's play out this scanario, and assume that the validator is sceptical about the prover's claim to be able to discern the cards without seeing the words on the back. To move this experiment forward the validator would repeatedly show the prover the front side of each card, in a random fashion. Each time, the validator would ask the prover what colour he sees. After some time, the verifier would eventually be convinced that the prover is capable of discerning the colours of the two individual cards. This is mostly due to the fact that a) the verifier performed this over many rounds and b) the validator randomly switched the cards behind his back during each round. Put simply, there is no way that the prover could just guess the correct colour of each randomly presented card over and over again. 
 
 Below are the three properties of which a zero knowledge proof must satisfy:
 - Completeness
@@ -281,48 +281,32 @@ Is where the verifier has no knowledge of how the prover came up with their bina
 learns nothing from the process other than the fact that the binary statement provided by the prover
 is correct
 - Soundness
-This is where a prover (even a dishonest one who is just guessing the answer of their binary
-statement) is able to convince an honest verifier that their answer is correct
+This is where a prover (even a dishonest one who is just guessing the answer of their binary statement) is able to convince an honest verifier that their answer is correct
 
 Whilst the first two properties can be quite easily satisfied during one round of an interactive zero knowledge proof exercise, there is statistically only a 50% chance of achieving soundness. Put simply, a dishonest prover could just take a 50/50 guess to the binary situation, and get it right 50% of the time. 
 
 With this in mind it is important to remember that zero knowledge proof’s are probabilistic. They are not deterministic. They rely on randomness to succeed.
 
+The above information describes a specific type of zero knowledge Protocol known as "interactive". In an interactive zero knowledge protocol the verifyer and the prover must repeat each round until the verifier is convinced, without any reasonable doubt, that the prover knows the secret.
+
+A non-interactive zero knowledge protocol is different because it only requires a single round. A non-interactive zero knowledge proof however requires a "trusted setup". One advantage of the non-interactive zero knowledge protocol is that it allows many verifiers to all independently query the ability of the prover. Think of this as a one:many relationship between the prover and verifier entities, as apposed to the interactive zero knowledge protocol's one:one relationship.
+
 ## ZK-SNARKs
-These properties are able to be satisfied through computer code and as such zero knowledge proof
-implementations such as the Zero Knowledge Succinct Non-interactive ARguments of Knowledge
-(ZK-SNARK) protocol have tremendous potential in the online space. Just one example of ZK-
-SNARKs potential is the creation of a decentralised anonymous sealed-bid auction. In this case,
-whilst the logic of determining the winner would execute successfully, the winner’s identity and the
-winning bid amount would both remain confidential.
+These Zero-Knowledge Succinct Non-interactive ARguments of Knowledge (ZK-SNARKs), are able to be satisfied through computer code and as such zero knowledge proof implementations have tremendous potential in the online space. Just one example of ZK-
+SNARKs potential is the creation of a decentralised anonymous sealed-bid auction. In this case, whilst the logic of determining the winner would execute successfully, the winner’s identity and the winning bid amount could both remain confidential.
 
 You can think of ZK-SNARKs in the following way. ZK-SNARKs are for arbitary computations, just as hashing algorithm are for arbitary data. Put simply, you can turn an arbitary computation into a ZK-SNARK, and since verifying arbitrary computations is at the core of the Ethereum blockchain, ZK-SNARKs are of course very relevant to Ethereum. If implemented in Ethereum, ZK-SNARKs would not be limited to a single computational problem. Enabling ZK-SNARKs for Ethereum would, amongst other things, reduce the gas costs for certain pairing functions and elliptic curve operations. Overall, the biggest payoff for enabling ZK-SNARKs would be improved (guaranteed) performance of the Ethereum Virtual Machine (EVM). Unfortunately an implementation of this magnitude would be extremely difficult to complete and as such might take many years to move from proof of concept
-to early adoption. This may be something which we could see around 2020. However, in the event that this is too onerous, the other possibility would be to swap out the EVM completely and use something like the Ethereum flavoured WebAssembly (eWASM). 
+to early adoption. This may be something which will be implemented in the future of Ethereum. Let's now compare ZK-STARKs. 
 
 ## ZK-STARKs
-The confidentiality of zero knowledge proof is already being used to enhance privacy in
-cryptocurrencies. For example Zcash, already uses the ZK-SNARKs protocol. We just mentioned
-the possibility of an Ethereum implementation of ZK-SNARKs and its associated advantages.
-However, a new shiner cousin, Zero Knowledge Succinct Transparent ARguments of Knowledge
-(ZK-STARKs) looks to resolve one of the primary weaknesses of ZK-SNARKs; its reliance on a
-“trusted setup”. Interestingly, ZK-STARKs has also arrived with much simpler cryptographic
-assumptions. You may recall that ZK-SNARKs was promising advantages in relation to pairing
-functions and elliptical curve operations. Well, ZK-STARKs avoid the need for elliptic curves,
-pairings and the knowledge-of-exponent assumption; instead ZK-STARKs rely purely on hashes
-and information theory. 
+The confidentiality of zero knowledge proof is already being used to enhance privacy in cryptocurrencies. For example Zcash, already uses the ZK-SNARKs protocol. We just mentioned the possibility of an Ethereum implementation of ZK-SNARKs and its associated advantages. However, a new shiner cousin, Zero Knowledge Succinct Transparent ARguments of Knowledge
+(ZK-STARKs) looks to resolve one of the primary weaknesses of ZK-SNARKs; its reliance on a “trusted setup”. Interestingly, ZK-STARKs has also arrived with much simpler cryptographic assumptions. You may recall that ZK-SNARKs was promising advantages in relation to pairing functions and elliptical curve operations. Well, ZK-STARKs avoid the need for elliptic curves,
+pairings and the knowledge-of-exponent assumption; instead ZK-STARKs rely purely on hashes and information theory. 
 
-This means that whilst ZK-STARKs bring about efficiency gains and more,
-they are also secure against attackers with quantum computers. Looking towards the future, ZK-
-STARKs could replace ZK-SNARKs, providing superior scalability and privacy, specifically to
-decentralised public ledgers like Ethereum. It is also important to note that these advantages all
-come at a cost IE. the size of a proof goes up from 288 bytes to a few hundred kilobytes. Further
-research is required in relation to shortening proof length or the aggregation and compression of
-several ZK-STARKs proofs. 
+This means that whilst ZK-STARKs bring about efficiency gains and more, they are also secure against attackers with quantum computers. Looking towards the future, ZK-STARKs could replace ZK-SNARKs, providing superior scalability and privacy, specifically to decentralised public ledgers like Ethereum. It is also important to note that these advantages all
+come at a cost i.e. the size of a proof goes up from 288 bytes to a few hundred kilobytes. Further research is required in relation to shortening proof length or the aggregation and compression of several ZK-STARKs proofs. 
 
-In the context of public blockchain applications there is a) a high need
-for trust minimisation b) a possibilities that elliptic curves could break and c) a seemingly real
-possibility of quantum computers coming around. Given all of these points, implementing ZK-
-STARKs in decentralised public ledgers seems worth it, even if there are costs involved.
+In the context of public blockchain applications there is a) a high need for trust minimisation b) a possibilities that elliptic curves could break and c) a seemingly real possibility of quantum computers coming around. Given all of these points, implementing ZK-STARKs in decentralised public ledgers seems worth it, even if there are costs involved.
 
 ## Off-chain data
 
