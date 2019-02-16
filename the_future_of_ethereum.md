@@ -198,9 +198,9 @@ At present there are separate compilers for each of the smart contract programmi
 
 The job of a compiler is to convert your high level smart contract code into bytecode, ABI, and LLL. Once your code is compiled it can be executed by the Ethereum Virtual Machine (EVM).
 
-eWASM is Ethereum's own implementation of [Web Assembly](https://webassembly.org/). eWASM is being developed to replace the EVM. 
+[eWASM](https://github.com/ewasm/design) is Ethereum's own implementation of [Web Assembly](https://webassembly.org/)(WASM). WebAssembly is currently being designed as an open standard by a W3C Community Group. 
 
-
+eWASM is being developed to replace the EVM. Once eWASM is implemented, developers will be able to write smart contracts in other languages such as Rust and C/C++ as apposed to just Solidity and Vyper. It is important to note that eWASM will be completely backwards compatible with the current EVM. This means that smart contracts which are currently written in Solidity or Vyper will still be able to execute in the new environment.
 
 # Delivery phases of Ethereum 2.0
 
