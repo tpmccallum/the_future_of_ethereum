@@ -192,7 +192,7 @@ One of the design goals of Ethereum 2.0 is to allow for a typical consumer lapto
 
 You may have already realized by now that Ethereum 2.0/Serenity is a new blockchain. Albeit one which links to the existing Ethereum 1.0 PoW chain (i.e. the new PoS chain is aware of the block hashes of the PoW chain and so forth). The goal for this architecture will allow Ether to be moved between the original PoW chain and the PoS chain. In addition the long term vision would be to allow applications from the current blockchain to be redeployed on a shard of the Ethereum 2.0 system. This would be implemented via a new EVM interpreter written in eWASM.
 
-### eWASM
+## eWASM
 
 At present there are separate compilers for each of the smart contract programming languages. You can build and install either the [Solidity](https://github.com/ethereum/solidity#build-and-install) or [Vyper](https://vyper.readthedocs.io/en/latest/installing-vyper.html) compiler software and run it on local disk. Or alternatively, you can use the free online code editors for both [Solidity](https://remix.ethereum.org) and [Vyper](https://vyper.online/).
 
@@ -204,7 +204,17 @@ eWASM is being developed to replace the EVM. Once eWASM is implemented, develope
 
 # Delivery phases of Ethereum 2.0
 
-Ethereum 2.0 is expected to be implemented as follows. Firstly with Phase 0. Phase 0, which we have briefly covered above, involves the introduction of the beacon chain and so essentially Phase 0 is the beginning of the new PoS chain. The next phase, Phase 1 will implement shards as data chains. Phase 1 will provide the foundations to create decentralized data applications, however in order to full implement any of these types of applications the benefits of phase 2 will be required. Phase 2 will enable  state transitions or more specifically the ability to create and manage accounts and contracts as well as transfer funds between shards and so forth. It is hoped that state transition changes and transaction executions will improve significantly due to the implementation of EWASM. There is a comprehensive [Ethereum 2.0 roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap#ethereum-20) which details each of the proposed phases. Please keep in mind that these specifications do change frequently and that the proof-of-concept algorithms and code repositories are under heavy construction.
+## Phase 0
+
+Ethereum 2.0 is expected to be implemented as follows. Firstly with Phase 0. Phase 0, which we have briefly covered above, involves the introduction of the beacon chain and so essentially Phase 0 is the beginning of the new PoS chain. More specifically, PoS beacon chain without shards.
+
+## Phase 1
+
+The next phase, Phase 1 will implement shards as data chains. Phase 1 will provide the foundations to create decentralized data applications, however in order to full implement any of these types of applications the benefits of phase 2 will be required. Put simply, Phase 1 is implementing basic sharding without an EVM.
+
+## Phase 2
+
+EVM state transition functionality will be introduced in Phase 2. Phase 2 will introduce functionality to create and manage accounts and contracts as well as transfer funds between shards and so forth. It is hoped that state transition changes and transaction executions will improve significantly due to the implementation of eWASM. There is a comprehensive [Ethereum 2.0 roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap#ethereum-20) which details each of the proposed phases. Please keep in mind that these specifications do change frequently and that the proof-of-concept algorithms and code repositories are under heavy construction.
 
 # Post Ethereum 2.0 innovation
 
